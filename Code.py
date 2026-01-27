@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Dec 16 13:52:04 2025
-
-@author: 91788
-"""
 
 import pandas as pd 
 from sklearn.model_selection import train_test_split
@@ -51,6 +45,7 @@ confusion_matrix = pd.DataFrame({
             "Actual_Values":target_test.values,
             "Predicted_Values":prediction})
 confusion_matrix.to_excel("confusion_matrix.xlsx",index=False)
+
 
 
 
