@@ -11,8 +11,7 @@ from sklearn.tree import DecisionTreeClassifier,plot_tree
 from sklearn.metrics import classification_report
 import matplotlib.pyplot as plot
 
-temp_DF = pd.read_excel("C:/Users/91788/Desktop/Python/Data Science/Decision_tree/Projects/4.Gym_Customer_Churn/gym_customer_churn .xlsx",
-                        sheet_name="weight_of_evidence")
+temp_DF = pd.read_excel("enter_your_file_path", sheet_name="weight_of_evidence")
 
 customer_DF = temp_DF.drop("Customer_IDs",axis = 1)
 final_DF = customer_DF.drop("Churn",axis =1)
@@ -52,6 +51,7 @@ confusion_matrix = pd.DataFrame({
             "Actual_Values":target_test.values,
             "Predicted_Values":prediction})
 confusion_matrix.to_excel("confusion_matrix.xlsx",index=False)
+
 
 
 
